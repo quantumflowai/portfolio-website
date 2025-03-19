@@ -87,12 +87,18 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.about-col-1, .about-col-2 {
-    flex: 1;
+.about-col-1 {
+    flex: 0 0 50%;
+    order: 1;
+}
+
+.about-col-2 {
+    flex: 0 0 50%;
+    order: 2;
 }
 
 .about-col-1 img {
-    border-radius: 20px;
+    border-radius: 25px;
     width: 80%;
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
@@ -103,6 +109,16 @@ nav ul li a:hover {
     color: #00A86B;
 }
 
+#download-cv {
+   padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    background: 00A86B;
+    color: #121212;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
 .tab-titles {
     display: flex;
     margin-bottom: 25px;
@@ -196,8 +212,8 @@ button:hover {
     background: #00cc6d;
 }
 
-/* Footer or Additional Adjustments */
-footer{
+
+footer {
     padding: 20px 0;
     text-align: center;
     background: #101010;
@@ -207,7 +223,7 @@ footer{
 footer p {
     font-size: 14px;
 }
-/* Contact Section Styling */
+/* Contact Section */
 #contact {
     padding: 50px 0;
     background-color: #121212;
@@ -246,7 +262,7 @@ footer p {
 }
 
 #random-facts button {
-    background-color: #00b894; /* green theme color */
+    background-color: #00b894;
     border: none;
     color: white;
     padding: 10px 20px;
