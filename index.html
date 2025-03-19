@@ -71,6 +71,15 @@
         </div> 
         <button>Download CV</button>
 
+
+        <!-- Random Facts Section -->
+<div id="random-facts">
+    <div class="container">
+        <h1 class="sub-title">Random Facts About Me</h1>
+        <p id="fact-display">Click the button for a random fact!</p>
+        <button onclick="displayRandomFact()">Show Another Fact</button>
+    </div>
+
     </div>
 </div>
 *<!-- Services Section -->
@@ -129,53 +138,9 @@
                 </div>
             </div>
         </div>
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(event, tabname){
-        var isActive = event.currentTarget.classList.contains("active-link");
-
-        for (var tablink of tablinks){
-            tablink.classList.remove("active-link");
-    
-        }
-        for (var tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-        }
-        
-        if (isActive){
-            event.currentTarget.classList.remove("active-link")
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-        <!-- Existing Portfolio HTML ends here -->
-    </div>
-</div>
-
-<!-- Place the new contact section HERE -->
-<div id="contact">
-    <div class="container">
-        <h2 class="sub-title">Contact Me</h2>
-        <div class="contact-links">
-            <a href="https://www.linkedin.com/in/flowenstheagene" target="_blank">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/quantumflowai" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="mailto:snewolf@icloud.com">
-                <i class="fa-solid fa-envelope"></i> Email
-            </a>
-        </div>
     </div>
 </div>
 
 </body>
-</html>
 
-</body>
 </html>
