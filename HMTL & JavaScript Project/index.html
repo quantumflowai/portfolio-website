@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6004a9a5a4.js" crossorigin="anonymous"></script>
+</head>
+<header>
+    <div class="container">
+        <nav>
+            <img src="../HMTL & JavaScript Project/Images/Logo (flowens.).png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hello, I'm <span>Flowens</span><br>–Front-End Developer<span><br>& AI Enthusiast</span></h1>
+        </div>
+    </div>
+</header>
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Graudation Picture.JPG">
+            </div>
+            <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I combine my background in operations management with front-end web development, leveraging JavaScript, React, Angular, and AI integration to build scalable, efficient solutions. 
+                        My passion lies in automating tasks to enhance productivity and streamline workflows. 
+                        Currently enhancing my skill set in JavaScript frameworks, AI-driven development, and modern web technologies.</p>
+                      
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills"> 
+                        <ul>
+                            <li><span>UX/UI Design & Prototyping</span><br>Building Scalable Websites</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Cross-Platform App Development (React Native or Flutter)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019-2021</span><br>Developed a deep understanding of both functional SAP skills and critical corporate functions.</li>
+                            <li><span>2021-2022</span><br>Corporate Trainer at Alcides Group</li>
+                            <li><span>2023-Present</span><br></li>Operations Manager at Marksman Security Corporation.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2021</span><br>Icode at Itech Miami</li>
+                            <li><span>2020-2021</span><br>Certifications in Enterprise Resource Planning (Intergrating and managing core business processes)</li>
+                            <li><span>2021-Present</span><br></li>Continuing to learn and grow as an individual</li>
+                        </ul>
+                       
+                </div>
+
+
+        </div> 
+        <button>Download CV</button>
+
+    </div>
+</div>
+*<!-- Services Section -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Responsive Web Apps</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Development</h2>
+                <p>Cross-Platform iOS & Android Development</p>
+                <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX</h2>
+            <p>UX/UI Design & Consulting</p>
+            <a href="#">Learn more</a>
+    </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>FlowState</h3>
+                    <p>HTML/CSS/JS | AI-driven productivity insights</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>QuantumSecure</h3>
+                    <p>React.js, AI integration</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>FinSight</h3>
+                    <p>React.js, TypeScript, Chart.js, Flask..</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname){
+        var isActive = event.currentTarget.classList.contains("active-link");
+
+        for (var tablink of tablinks){
+            tablink.classList.remove("active-link");
+    
+        }
+        for (var tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        }
+        
+        if (isActive){
+            event.currentTarget.classList.remove("active-link")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+        <!-- Existing Portfolio HTML ends here -->
+    </div>
+</div>
+
+<!-- Place the new contact section HERE -->
+<div id="contact">
+    <div class="container">
+        <h2 class="sub-title">Contact Me</h2>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/flowenstheagene" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/quantumflowai" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="mailto:snewolf@icloud.com">
+                <i class="fa-solid fa-envelope"></i> Email
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    const facts = [
+        "I love integrating AI into daily workflows to optimize tasks.",
+        "My favorite productivity hack is subconscious training and neurohacking.",
+        "I use binaural beats to enhance my focus while coding.",
+        "I'm passionate about quantum science and its future impact on technology.",
+        "I enjoy playing instruments at church, especially the piano.",
+        "I believe deeply in automation to reduce mental clutter and improve efficiency.",
+        "I combine security operations experience with front-end development.",
+        "Neurohacking methods help me learn coding at accelerated rates.",
+        "I leverage pattern recognition to enhance my cognitive skills, similar to AI.",
+        "I’m working towards financial independence by integrating automation into my daily life.",
+        "My learning methods prioritize active recall and spaced repetition.",
+        "Basketball helps me clear my mind and boost creativity.",
+        "I'm passionate about quantum science and its technological potential."
+    ];
+
+    function displayRandomFact() {
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById('fact-display').innerText = randomFact;
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomFact);
+</script>
+
+</div> 
+<button>Download CV</button>
+
+</body>
+
+</html>
